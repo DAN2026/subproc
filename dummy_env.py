@@ -23,7 +23,9 @@ class DummyEnv:
         pass
     
     def test_launch(self):
-        self._process_controller._process_dict[self._process_name].launch()
+        self._process_controller.launch(
+            process_name=self._process_name
+        )
         pass
     
     def test_reset(self):

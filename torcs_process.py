@@ -13,11 +13,10 @@ class TorcsProcess(BaseProcess):
             process_name=self._name
         )
         
-        self.pid = ""
     
     def launch(self):
-        # Launch bs
-        self.pid = subprocess.Popen("notepad.exe").pid
+        self._pid = subprocess.Popen("notepad.exe").pid
+        self._state = "Running"
         pass
     
     def reset(self):
