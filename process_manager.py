@@ -17,12 +17,7 @@ class ProcessController:
         
     def display_dictionary(self):
         for key, value in self._process_dict.items():
-            print(f"Key: {key}\n State: {value._state}\n PID: {value._pid}")       
-        
-    def update_process_pid(self, process_name):
-        self._process_dict.get(
-            key = process_name
-        )
+            print(f"Key: {key}\nState: {value._state}\nPID: {value._pid}\n")       
         
     def launch(self, process_name):
         self._process_dict.get(process_name).launch()

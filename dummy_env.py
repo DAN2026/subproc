@@ -1,9 +1,13 @@
+#region Imports
+
 from torcs_process import TorcsProcess
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from process_manager import ProcessController
     
+#endregion    
+
 class DummyEnv:
     def __init__(self, env_id, process_controller : ProcessController):
         

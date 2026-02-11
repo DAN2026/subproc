@@ -15,13 +15,16 @@ class TorcsProcess(BaseProcess):
         
     
     def launch(self):
-        self._pid = subprocess.Popen("notepad.exe").pid
+        self._process = subprocess.Popen("notepad.exe")
+        self._pid = self._process.pid
         self._state = "Running"
-        pass
     
     def reset(self):
-        return super().reset()
+        pass        
     
     def end(self):
-        return super().end()    
+        
+        if self._process:
+            print(f"Closing {self._process_name}")            
+        
     

@@ -6,7 +6,8 @@ class BaseProcess(ABC):
     def __init__(self, process_name):
         self._process_name = process_name
         self._state = "Not Running"
-        self._pid = ""
+        self._pid = "No Process Currently"
+        self._process = ""
         
     @abstractmethod
     def launch(self):
