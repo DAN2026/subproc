@@ -7,6 +7,3 @@ What I aim to improve upon:
 - To increase my understanding of subproc and multi-processing module.
 - To simulate similiar process handling to our main repo.
 
-## How to setup project
-
-First, clone the repository.
