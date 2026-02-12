@@ -2,6 +2,8 @@ import subprocess
 from dummy_env import DummyEnv
 from base_process import BaseProcess
 
+    
+
 class ProcessController:
     
     def __init__(self):
@@ -17,11 +19,17 @@ class ProcessController:
         
     def display_dictionary(self):
         for key, value in self._process_dict.items():
-            print(f"Key: {key}\nState: {value._state}\nPID: {value._pid}\n")       
+            print(f"Key: {key}\nState: {value._state}\nPID: {value._pid}\nProcess: {value._process}\n")       
         
     def launch(self, process_name):
         self._process_dict.get(process_name).launch()
         pass
+    
+    def end(self, process_name):
+        self._process_dict.get(process_name).end()
+        
+    def reset(self, process_name):
+        self._process_dict.get(process_name).reset()
     
     
     
