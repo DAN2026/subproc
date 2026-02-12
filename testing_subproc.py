@@ -1,5 +1,6 @@
 from process_manager import ProcessController
 from dummy_env import DummyEnv
+import multiprocessing
 
 _controller = ProcessController()
 

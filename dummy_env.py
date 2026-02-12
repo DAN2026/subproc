@@ -25,15 +25,17 @@ class DummyEnv:
             process=_torcs_process
         )
         
-        self._process_controller.launch(self._process_name)
-        
-        time.sleep(2)
-        
-        self._process_controller.end(self._process_name)
+
         
 
         
     
     
-    
+    def test_multiproc(self):
+        
+        self._process_controller.launch(self._process_name)
+        
+        time.sleep(2)
+        
+        self._process_controller.end(self._process_name)
     
